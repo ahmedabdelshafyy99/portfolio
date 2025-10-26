@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ahmed Abdelshafy | Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <script src="https://kit.fontawesome.com/a2e0d6f6b3.js" crossorigin="anonymous"></script>
+  <style>
+   
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: #fafafa;
+      color: #222;
+      overflow-x: hidden;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      transition: 0.3s ease;
+    }
+
+    h1, h2, h3 {
+      font-weight: 600;
+      color: #222;
+    }
+
+    p {
+      line-height: 1.7;
+      color: #555;
+    }
+
+    nav {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(6px);
+      border-bottom: 1px solid #e6e6e6;
+      padding: 1rem 6%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #0077ff;
+      letter-spacing: 1px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    nav ul li a:hover {
+      color: #0077ff;
+    }
+
+  
+    .hero {
+      height: 100vh;
+      background: url(christopher-gower-m_HRfLhgABo-unsplash.jpg) center/cover no-repeat;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: #fff;
+      position: relative;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.3);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-content h1 {
+      font-size: 3rem;
+      margin-bottom: 0.8rem;
+      color:#fff;
+    }
+
+    .hero-content h2 {
+      font-weight: 400;
+      font-size: 1.2rem;
+      color: #f1f1f1;
+      margin-bottom: 1.5rem;
+    }
+
+    .btn {
+      background: #0077ff;
+      color: #fff;
+      padding: 0.8rem 2rem;
+      border-radius: 30px;
+      font-weight: 500;
+      transition: 0.3s ease;
+      display: inline-block;
+    }
+
+    .btn:hover {
+      background: #005ed4;
+      transform: translateY(-3px);
+    }
+
+   
+    .palestine {
+      width: 100%;
+      background: #f9f9f9;
+      text-align: center;
+      padding: 1.5rem 0;
+      margin-top: -3rem;
+      position: relative;
+      color: red;
+    }
+
+    .palestine span {
+      display: inline-block;
+      background: transparent; 
+      color: red;
+      font-size: 1.1rem;
+      padding: 0.6rem 1.2rem;
+      border-radius: 30px;
+      animation: bounce 3s infinite;
+    }
+
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+      }
+      40% {
+        transform: translateY(-7px);
+      }
+      60% {
+        transform: translateY(-3px);
+      }
+    }
+
+   
+    section {
+      padding: 5rem 10%;
+    }
+
+    section h2 {
+      font-size: 2rem;
+      margin-bottom: 1.2rem;
+      color: #0077ff;
+    }
+
+   
+    #about {
+      background: #fff;
+      border-radius: 16px;
+      margin-top: 3rem;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+    }
+
+    #about .content {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    #about p {
+      margin-top: 1rem;
+    }
+#about {
+  background: #fff;
+  border-radius: 16px;
+  margin-top: 3rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+  padding: 4rem 8%;
+}
+
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.about-img img {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #0077ff;
+  box-shadow: 0 6px 20px rgba(0, 119, 255, 0.15);
+  transition: 0.3s ease;
+}
+
+.about-img img:hover {
+  transform: scale(1.05);
+}
+
+.about-content {
+  max-width: 600px;
+  text-align: left;
+}
+
+.about-content p {
+  margin-top: 1rem;
+  color: #555;
+  line-height: 1.7;
+}
+
+    
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .skill {
+      background: #f2f6ff;
+      border: 1px solid #d7e3ff;
+      border-radius: 10px;
+      text-align: center;
+      padding: 1.5rem;
+      transition: 0.3s ease;
+    }
+
+    .skill i {
+      color: #0077ff;
+      font-size: 1.8rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .skill:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(0, 119, 255, 0.2);
+    }
+
+    
+    .projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+}
+
+
+
+    .project {
+      background: #ffffff;
+      border: 1px solid #ececec;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+      transition: 0.3s ease;
+      
+    }
+
+    .project:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .project img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 12px 12px 0 0;
+    }
+
+    .project-content {
+      padding: 1.5rem;
+    }
+
+    .project-content h3 {
+      color: #0077ff;
+      margin-bottom: 0.5rem;
+    }
+     hr{
+        margin-left: 39%;
+     }
+  
+    .contact {
+      background: #f5f9ff;
+      border-radius: 16px;
+      text-align: center;
+      padding: 3rem;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+    }
+    .logo-fotter{
+           font-size: 1.5rem;
+      font-weight: 700;
+      color: #0077ff;
+      letter-spacing: 1px;
+      text-align: left;
+      margin-left: 10px;
+
+    }
+
+    .contact p {
+      margin-bottom: 1rem;
+    }
+
+   
+    footer {
+      background: #ffffff;
+      border-top: 1px solid #ddd;
+      text-align: center;
+      padding: 2rem 0;
+      margin-top: 3rem;
+    }
+
+    footer .socials {
+      display: flex;
+      justify-content: center;
+      gap: 1.2rem;
+      margin-bottom: 1rem;
+    }
+
+    footer .socials a {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: #f2f6ff;
+      color: #0077ff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      transition: 0.3s ease;
+    }
+
+    footer .socials a:hover {
+      background: #0077ff;
+      color: white;
+      transform: translateY(-3px);
+    }
+
+    footer p {
+      color: #777;
+      font-size: 0.9rem;
+      
+    }
+
+    @media (max-width: 768px) {
+      nav ul {
+        display: none;
+      }
+
+      .hero-content h1 {
+        font-size: 2.2rem;
+      }
+
+      section {
+        padding: 4rem 6%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="logo"><span style="color:#333;">Ahmed</span>Abdelshafy</div>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+ 
+  <section class="hero" id="hero">
+    <div class="hero-content">
+      <h1>Ahmed Abdelshafy</h1>
+      <h2>Front-End Developer · Web Designer & Motorcycle Enthusiast · Creative Developer</h2>
+      <a href="#contact" class="btn">Contact Me</a>
+    </div>
+  </section>
+
+  
+  <div class="palestine">
+    <span>🇵🇸 Free Palestine</span>
+  </div>
+
+
+<section id="about">
+  <div class="about-container">
+    <div class="about-img">
+      <img src="IMG_5558.jpg" alt="Ahmed Abdelshafy">
+    </div>
+    <div class="about-content">
+      <h2>About Me</h2>
+      <p>
+        I'm Ahmed, a creative front-end developer who loves clean, functional design and meaningful digital experiences.
+        I focus on responsive design, modern interfaces, and turning ideas into living, interactive projects.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+  
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills-grid">
+      <div class="skill"><i class="fab fa-html5"></i><h4>HTML5</h4></div>
+      <div class="skill"><i class="fab fa-css3-alt"></i><h4>CSS3</h4></div>
+      <div class="skill"><i class="fab fa-js-square"></i><h4>JavaScript</h4></div>
+      <div class="skill"><i class="fab fa-react"></i><h4>React</h4></div>
+      <div class="skill"><i class="fab fa-figma"></i><h4>Figma</h4></div>
+      <div class="skill"><i class="fab fa-git-alt"></i><h4>Git</h4></div>
+    </div>
+  </section>
+
+ 
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="projects-grid">
+    <div class="project">
+      <img src="https://images.unsplash.com/photo-1581091215367-59ab6a67b07f?auto=format&fit=crop&w=800&q=80" alt="">
+      <div class="project-content">
+        <h3>Portfolio Site</h3>
+        <p>Modern portfolio built with HTML, CSS, and JavaScript — clean layout, light theme, and fully responsive.</p>
+      </div>
+    </div>
+
+    <div class="project">
+      <img src="https://images.unsplash.com/photo-1587574293340-e0011c2c2e5c?auto=format&fit=crop&w=800&q=80" alt="">
+      <div class="project-content">
+        <h3>Agency Landing Page</h3>
+        <p>Bright landing page design built for digital agencies with minimal design and clear call to actions.</p>
+      </div>
+    </div>
+
+    <div class="project">
+      <div class="project-content">
+        <h3>E-commerce Website</h3>
+        <p>Responsive e-commerce site with product listings, shopping cart, and checkout functionality using React.</p>
+      </div>
+    </div>
+
+    <div class="project">
+      <div class="project-content">
+        <h3>Web Applications</h3>
+        <p>Web applications are where creativity meets functionality — every component a chance to make the web feel alive.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+ 
+  <section id="contact" class="contact">
+    <h2>Contact</h2>
+    <p>Let’s build something creative together.</p>
+    <p><i class="fas fa-envelope" style="color: #0077ff;"></i> ahmedabdelshafyy99@gmail.com</p>
+    <p><i class="fas fa-phone " style="color:#25D366;" ></i>(+22)01030023944</p>
+    <P><i class="fas fa-map-marker-alt" style="color: red;"></i> nasr city  CAI,EGY</P>
+
+    <a href="mailto:ahmedabdelshafyy99@gmail.com" class="btn">Send Email</a>
+  </section>
+
+  
+  <footer>
+    <div class="logo-fotter"><span style="color:#333;">Ahmed</span>Abdelshafy</div>
+    <div class="socials">
+      
+      <a href="https://www.facebook.com/share/179BUMW45Y/?mibextid=wwXIfr"><i class="fab fa-facebook"></i></a>
+      <a href="https://www.instagram.com/ahmeddabdelshafyy?igsh=dzF3Y3Bmd2ppM2Q1&utm_source=qr"><i class="fab fa-instagram"></i></a>
+
+    </div>
+    <hr size="2" width="22%" color="#e6e6e6" />
+    <p>© 2025 Ahmed Abdelshafy. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
